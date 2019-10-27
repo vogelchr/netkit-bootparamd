@@ -2,6 +2,10 @@ all: bootparamd
 include ../MCONFIG
 include ../MRULES
 
+# this normally should go into CPPFLAGS, but MRULES
+# override default Makefile rules.
+CFLAGS=-I/usr/include/tirpc
+
 RPCGEN=rpcgen
 
 # Warning, do NOT put this in the current directory under its own
@@ -16,10 +20,10 @@ DIST=README main.c rpc.bootparamd.c callbootd.c bootparamd.8 Makefile
 all: bootparamd callbootd
 
 bootparamd: bootparam_prot_svc.o bootparam_prot_xdr.o rpc.bootparamd.o main.o
-	${CC} $(LDFLAGS) $^ $(LIBS) -o $@
+	${CC} $(LDFLAGS) $^ $(LIBS) -o $@ -ltirpc
 
 callbootd: callbootd.o bootparam_prot_clnt.o bootparam_prot_xdr.o 
-	${CC} $(LDFLAGS) $^ $(LIBS) -o $@
+	${CC} $(LDFLAGS) $^ $(LIBS) -o $@ -ltirpc
 
 install: bootparamd callbootd
 	install -s -m $(DAEMONMODE) bootparamd \
