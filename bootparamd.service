@@ -1,0 +1,12 @@
+[Unit]
+Description=rpc bootparam daemon
+Requires=rpcbind.socket
+Wants=network-online.target
+After=network-online.target rpcbind.socket
+
+[Service]
+Type=forking
+ExecStart=/usr/local/sbin/bootparamd
+
+[Install]
+WantedBy=multi-user.target

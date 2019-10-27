@@ -1,0 +1,11 @@
+# bootparams example file
+
+# SPARCstation LX, No Keyboard
+# ROM Rev. 2.10, 56 MB memory installed, Serial #7345324.
+# Ethernet address 8:0:20:18:c9:6c, Host ID: 807014ac.
+
+sunlx   root=optiplex980:/srv/solaris \
+    install=optiplex980:/pub/solaris \
+    rootops=:rsize=32768 boottype=:in
+
+

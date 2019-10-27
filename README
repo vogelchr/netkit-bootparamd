@@ -1,3 +1,22 @@
+How to build under Archlinux.
+
+* Dependencies
+
+- rpcsvc-proto (for rpcgen)
+- libtirpc (for the header files)
+
+* Build
+
+./configure
+make
+sudo ./install.sh
+
+Execution of install.sh will put all binaries to /usr/local/sbin, manpages
+into /usr/local/share/man, a systemd.service fine into /etc/systemd/system,
+start and enable the service. An example /etc/bootparams file will also be installed.
+
+=== Original README content follows ===
+
 This is netkit-bootparamd-0.17 for Linux.
 
 This package updates netkit-bootparamd-0.16.
