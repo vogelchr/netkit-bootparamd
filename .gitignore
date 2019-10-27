@@ -1,0 +1,13 @@
+*.o
+MCONFIG
+
+rpc.bootparamd/bootparam_prot.h
+rpc.bootparamd/bootparam_prot.x
+rpc.bootparamd/bootparam_prot_clnt.c
+rpc.bootparamd/bootparam_prot_svc.c
+rpc.bootparamd/bootparam_prot_xdr.c
+rpc.bootparamd/bootparamd
+rpc.bootparamd/bootparamd.8.gz
+rpc.bootparamd/bootparams.5.gz
+rpc.bootparamd/callbootd
+
