@@ -10,7 +10,7 @@ install -v -m644 rpc.bootparamd/bootparamd.8.gz /usr/local/share/man/man8/bootpa
 install -v -m755 -d /usr/local/share/man/man5
 install -v -m644 rpc.bootparamd/bootparams.5.gz /usr/local/share/man/man5/bootparams.5.gz
 
-install -v -m644 bootparams.example /etc/bootparams
+[ -f /etc/bootparams ] || install -v -m644 bootparams.example /etc/bootparams
 
 systemd_reload=0
 

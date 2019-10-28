@@ -15,6 +15,9 @@ Execution of install.sh will put all binaries to /usr/local/sbin, manpages
 into /usr/local/share/man, a systemd.service fine into /etc/systemd/system,
 start and enable the service. An example /etc/bootparams file will also be installed.
 
+To boot a SUN Sparcstation, the bootparamd must return the router ip address,
+see the "-r" option in the supplied .service file!
+
 === Original README content follows ===
 
 This is netkit-bootparamd-0.17 for Linux.

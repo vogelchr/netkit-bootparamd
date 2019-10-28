@@ -6,7 +6,7 @@ After=network-online.target rpcbind.socket
 
 [Service]
 Type=forking
-ExecStart=/usr/local/sbin/bootparamd
+ExecStart=/usr/local/sbin/bootparamd -r 172.17.2.1
 
 [Install]
 WantedBy=multi-user.target
