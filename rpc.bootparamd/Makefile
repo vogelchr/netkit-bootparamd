@@ -4,7 +4,7 @@ include ../MRULES
 
 # this normally should go into CPPFLAGS, but MRULES
 # override default Makefile rules.
-CFLAGS=-I/usr/include/tirpc
+CFLAGS=-I/usr/include/tirpc -Wall -Wextra -O2
 
 RPCGEN=rpcgen
 
